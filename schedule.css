@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .schedule {
+    border: 1px solid #e0e7e7;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .schedule th,
+  .schedule td {
+    padding: 10px;
+    border: 1px solid #000000;
+    text-align: left;
+  }
+  
+  .schedule th {
+    background-color: #ffffff;
+    font-weight: bold;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .schedule table {
+      width: 100%;
+    }
+  
+    .schedule th,
+    .schedule td {
+      padding: 5px;
+    }
+  }
+  
