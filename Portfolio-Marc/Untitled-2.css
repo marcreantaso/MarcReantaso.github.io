@@ -140,10 +140,13 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
+  text-decoration: none;  /* Add this line */
 }
+
 .nav__link:hover {
   position: relative;
 }
+
 .nav__link:hover::after {
   position: absolute;
   content: "";
@@ -153,8 +156,20 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+
+.active-link::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
 .nav__logo {
   color: var(--second-color);
+  text-decoration: none;
 }
 .nav__toggle {
   color: var(--second-color);
@@ -214,6 +229,51 @@ img {
   width: 360px;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__btn {
+  background-color: #fff;
+  color: var(--second-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown__btn:hover, .dropdown__btn:focus {
+  background-color: var(--first-color);
+  color: #fff; 
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: var(--second-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown__content .dropdown__link {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown__content .dropdown__link:hover {
+  background-color: var(--first-color);
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+
 /*BUTTONS*/
 .button {
   display: inline-block;
@@ -223,6 +283,8 @@ img {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
+  text-decoration: none;
+
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
@@ -405,9 +467,12 @@ img {
   .contact__form {
     width: 360px;
     padding-top: 2rem;
+    text-decoration: none;
+
   }
   .contact__container {
     justify-items: center;
+    
   }
 }
 @media screen and (min-width: 768px) {
