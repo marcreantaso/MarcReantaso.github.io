@@ -124,6 +124,11 @@ img {
 }
 @media screen and (max-width: 767px) {
   .nav__menu {
+    background-color: #fff;
+  color: var(--second-color);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
     position: fixed;
     top: var(--header-height);
     right: -100%;
